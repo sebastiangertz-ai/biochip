@@ -1,20 +1,11 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+Der Frischwaechter zaehlt Temperaturmessungen. Bei jeder Messung (uio_in[0] = Messung fertig) wird der Wert an ui_in mit einem festen Grenzwert (8) verglichen. Der Chip zaehlt alle Messungen und die zu warmen Messungen. Ist eine Messung zu warm, geht der Alarm (uio_out[3]) an.
 
 ## How to test
 
-Explain how to use your project
+Temperaturwert an ui_in anlegen und uio_in[0] kurz auf 1 setzen. Mit uio_in[1] (Anfrage) die Zaehlerstaende abfragen. Die Daten erscheinen an uo_out, uio_out[2] zeigt an, dass die Daten gueltig sind.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Temperatursensor mit 8-Bit-Ausgang, oder Schalter zum Testen.
